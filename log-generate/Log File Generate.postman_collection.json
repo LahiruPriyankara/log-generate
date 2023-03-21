@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "c4d3acb9-740f-4016-a2fe-6b9169f886b2",
+		"name": "Log File Generate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18326681"
+	},
+	"item": [
+		{
+			"name": "Test Success Log",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/app/get/one",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"app",
+						"get",
+						"one"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Error Log",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/app/get/two",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"app",
+						"get",
+						"two"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

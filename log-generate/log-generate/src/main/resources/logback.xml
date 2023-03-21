@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <!--<property name="LOG_FILE" value="logs/app.log"/>-->
+    <property name="LOG_FILE" value="../logs/app.log"/>
+    <property name="ERROR_LOG_FILE" value="../logs/app-error.log"/>
+
+    <appender name="FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE}</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--<fileNamePattern>logs/archived/app.%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+            <fileNamePattern>../logs/archived/app.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!-- each archived file, size max 5KB -->
+            <maxFileSize>5KB</maxFileSize>
+            <!-- total size of all archive files, if total size > 20KB, it will delete old archived file -->
+            <totalSizeCap>20KB</totalSizeCap>
+            <!-- 60 days to keep -->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d [REQ-UNQ-ID:%X{REQ_UNQ_ID}] %p %c{1.} [%t] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE-ERROR-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${ERROR_LOG_FILE}</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--<fileNamePattern>logs/archived/app.%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+            <fileNamePattern>../logs/archived/app-error.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!-- each archived file, size max 5KB -->
+            <maxFileSize>5KB</maxFileSize>
+            <!-- total size of all archive files, if total size > 20KB, it will delete old archived file -->
+            <totalSizeCap>20KB</totalSizeCap>
+            <!-- 60 days to keep -->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+
+            <Pattern>
+               <!--
+               %d{HH:mm:ss.SSS} [%thread] %-5level %class{36}.%M %L - %msg%n
+               18:05:46.139 [http-nio-1111-exec-2] INFO  c.l.l.controller.AppController.getTestOne 24 - getTestOne Method Called...
+               -->
+                %black(%d{ISO8601}) [REQ-UNQ-ID:%X{REQ_UNQ_ID}] %highlight(%-5level) [%blue(%t)] %yellow(%C{1.}.%M %L):%msg%n%throwable
+            </Pattern>
+
+        </layout>
+    </appender>
+
+    <!--
+        <appender name="EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">
+            <smtpHost>smtp.gmail.com</smtpHost>
+            <smtpPort>587</smtpPort>
+            <STARTTLS>true</STARTTLS>
+            <username>lahiru@gmail.com</username>
+            <password>asd</password>
+            <to>lahiru@gmail.com</to>
+            <from>lahiru@gmail.com</from>
+            <subject>TESTING: %logger{20} - %m</subject>
+
+            <layout class="ch.qos.logback.classic.html.HTMLLayout"/>
+        </appender>
+
+        <logger name="com.lhu.loggenerate" level="error" additivity="false">
+            <appender-ref ref="EMAIL"/>
+        </logger>
+    -->
+
+    <!-- LOG everything at INFO level -->
+    <root level="info">
+        <appender-ref ref="FILE-ROLLING"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!-- LOG everything at ERROR level -->
+    <root level="error">
+        <appender-ref ref="FILE-ERROR-ROLLING"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!-- LOG everything at DEBUG level -->
+    <root level="debug">
+        <appender-ref ref="FILE-ROLLING"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!-- LOG everything at WARM level -->
+    <root level="warn">
+        <appender-ref ref="FILE-ROLLING"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!-- LOG "com.lhu.loggenerate.*" at TRACE level -->
+    <logger name="com.lhu.loggenerate" level="debug" additivity="false">
+        <appender-ref ref="FILE-ROLLING"/>
+        <appender-ref ref="FILE-ERROR-ROLLING"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+
+</configuration>

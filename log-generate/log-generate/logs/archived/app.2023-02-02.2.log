@@ -1,0 +1,30 @@
+[30m2023-02-02 15:05:25,363[0;39m [REQ-UNQ-ID:0C80182F90E34C78BC36FF0B385B6DA4] [34mINFO [0;39m [[34mhttp-nio-1111-exec-1[0;39m] [33mcom.lhu.loggenerate.controller.AppController[0;39m:Logger-Info
+[30m2023-02-02 15:05:25,369[0;39m [REQ-UNQ-ID:0C80182F90E34C78BC36FF0B385B6DA4] [1;31mERROR[0;39m [[34mhttp-nio-1111-exec-1[0;39m] [33mcom.lhu.loggenerate.controller.AppController[0;39m:Logger-error
+[30m2023-02-02 15:05:25,369[0;39m [REQ-UNQ-ID:0C80182F90E34C78BC36FF0B385B6DA4] [39mDEBUG[0;39m [[34mhttp-nio-1111-exec-1[0;39m] [33mcom.lhu.loggenerate.controller.AppController[0;39m:Logger-debug
+[30m2023-02-02 15:05:25,370[0;39m [REQ-UNQ-ID:0C80182F90E34C78BC36FF0B385B6DA4] [31mWARN [0;39m [[34mhttp-nio-1111-exec-1[0;39m] [33mcom.lhu.loggenerate.controller.AppController[0;39m:Logger-warn
+[30m2023-02-02 15:05:25,380[0;39m [REQ-UNQ-ID:0C80182F90E34C78BC36FF0B385B6DA4] [39mTRACE[0;39m [[34mhttp-nio-1111-exec-1[0;39m] [33mcom.lhu.loggenerate.controller.AppController[0;39m:Logger-trace
+[30m2023-02-02 15:05:25,380[0;39m [REQ-UNQ-ID:0C80182F90E34C78BC36FF0B385B6DA4] [34mINFO [0;39m [[34mhttp-nio-1111-exec-1[0;39m] [33mcom.lhu.loggenerate.controller.AppController[0;39m:Slf4j-Info
+[30m2023-02-02 15:05:25,380[0;39m [REQ-UNQ-ID:0C80182F90E34C78BC36FF0B385B6DA4] [1;31mERROR[0;39m [[34mhttp-nio-1111-exec-1[0;39m] [33mcom.lhu.loggenerate.controller.AppController[0;39m:Slf4j-error
+[30m2023-02-02 15:05:25,380[0;39m [REQ-UNQ-ID:0C80182F90E34C78BC36FF0B385B6DA4] [39mDEBUG[0;39m [[34mhttp-nio-1111-exec-1[0;39m] [33mcom.lhu.loggenerate.controller.AppController[0;39m:Slf4j-debug
+[30m2023-02-02 15:05:25,382[0;39m [REQ-UNQ-ID:0C80182F90E34C78BC36FF0B385B6DA4] [31mWARN [0;39m [[34mhttp-nio-1111-exec-1[0;39m] [33mcom.lhu.loggenerate.controller.AppController[0;39m:Slf4j-warn
+[30m2023-02-02 15:05:25,382[0;39m [REQ-UNQ-ID:0C80182F90E34C78BC36FF0B385B6DA4] [39mTRACE[0;39m [[34mhttp-nio-1111-exec-1[0;39m] [33mcom.lhu.loggenerate.controller.AppController[0;39m:Slf4j-trace
+[30m2023-02-02 15:05:25,382[0;39m [REQ-UNQ-ID:0C80182F90E34C78BC36FF0B385B6DA4] [34mINFO [0;39m [[34mhttp-nio-1111-exec-1[0;39m] [33mcom.lhu.loggenerate.service.AppService[0;39m:AppService.testOne Method Called
+2023-02-02 15:06:31,427 [REQ-UNQ-ID:] INFO com.lhu.loggenerate.LogGenerateApplication [main] Starting LogGenerateApplication using Java 11.0.13 on Lahiru-Priyankara with PID 408 (E:\My\MyProject\log-generate\log-generate\target\classes started by LahiruPriyankara in E:\My\MyProject\log-generate\log-generate)
+2023-02-02 15:06:31,430 [REQ-UNQ-ID:] DEBUG com.lhu.loggenerate.LogGenerateApplication [main] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-02-02 15:06:31,430 [REQ-UNQ-ID:] INFO com.lhu.loggenerate.LogGenerateApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-02 15:06:33,025 [REQ-UNQ-ID:] DEBUG com.lhu.loggenerate.config.Slf4jMDCFilter [main] Filter 'slf4jMDCFilter' configured for use
+2023-02-02 15:06:33,379 [REQ-UNQ-ID:] INFO com.lhu.loggenerate.LogGenerateApplication [main] Started LogGenerateApplication in 2.363 seconds (JVM running for 2.9)
+2023-02-02 15:06:47,630 [REQ-UNQ-ID:0735A452C1B246119657D4D9574B6D52] INFO com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-1] Logger-Info
+2023-02-02 15:06:47,632 [REQ-UNQ-ID:0735A452C1B246119657D4D9574B6D52] ERROR com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-1] Logger-error
+2023-02-02 15:06:47,633 [REQ-UNQ-ID:0735A452C1B246119657D4D9574B6D52] DEBUG com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-1] Logger-debug
+2023-02-02 15:06:47,633 [REQ-UNQ-ID:0735A452C1B246119657D4D9574B6D52] WARN com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-1] Logger-warn
+2023-02-02 15:06:47,633 [REQ-UNQ-ID:0735A452C1B246119657D4D9574B6D52] TRACE com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-1] Logger-trace
+2023-02-02 15:06:47,633 [REQ-UNQ-ID:0735A452C1B246119657D4D9574B6D52] INFO com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-1] Slf4j-Info
+2023-02-02 15:06:47,634 [REQ-UNQ-ID:0735A452C1B246119657D4D9574B6D52] ERROR com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-1] Slf4j-error
+2023-02-02 15:06:47,634 [REQ-UNQ-ID:0735A452C1B246119657D4D9574B6D52] DEBUG com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-1] Slf4j-debug
+2023-02-02 15:06:47,635 [REQ-UNQ-ID:0735A452C1B246119657D4D9574B6D52] WARN com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-1] Slf4j-warn
+2023-02-02 15:06:47,635 [REQ-UNQ-ID:0735A452C1B246119657D4D9574B6D52] TRACE com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-1] Slf4j-trace
+2023-02-02 15:06:47,636 [REQ-UNQ-ID:0735A452C1B246119657D4D9574B6D52] INFO com.lhu.loggenerate.service.AppService [http-nio-1111-exec-1] AppService.testOne Method Called
+2023-02-02 15:06:55,169 [REQ-UNQ-ID:AAA8915AF8B9458BA5F517B24E3606AE] INFO com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-2] Logger-Info
+2023-02-02 15:06:55,169 [REQ-UNQ-ID:AAA8915AF8B9458BA5F517B24E3606AE] ERROR com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-2] Logger-error
+2023-02-02 15:06:55,169 [REQ-UNQ-ID:AAA8915AF8B9458BA5F517B24E3606AE] DEBUG com.lhu.loggenerate.controller.AppController [http-nio-1111-exec-2] Logger-debug
